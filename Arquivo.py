@@ -9,8 +9,6 @@ class Arquivo:
     def setNomeArquivo(self, nomeArquivo):
         self.nomeArquivo = nomeArquivo
 
-
-
     def addRegistro(self, r):
         if (os.path.isfile('./%s' % (self.nomeArquivo))):
             file = open(self.nomeArquivo, 'r+')

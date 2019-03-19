@@ -1,10 +1,10 @@
 from Arquivo import Arquivo
-import urllib.request
+from Url import Url
 
-url = urllib.request.urlopen("http://www.aylton.dev")
-html = url.read()
+url = Url('https://docs.python.org/3/')
+file = Arquivo('teste')
 
-str = html.decode("utf8")
-url.close()
+list = url.getWords()
 
-print(str)
+for word in list:
+    file.addRegistro(url.indexaPalavra(word))
